@@ -1,0 +1,32 @@
+{
+    "orders": [
+      {
+        "id": 1,
+        "account": "ek",
+        "name": "Elchonon",
+        "stage": "cart",
+        "movies": [
+          "movie1",
+          "movie2",
+          "movie3",
+          "movie4"
+        ]
+      }
+    ],
+    "movies": [
+      {
+        "id": 1,
+        "title": "StarTrek",
+        "image": "./something/image.jpg",
+        "likes": 0,
+        "available": true
+      }
+    ],
+    "wishlist": [
+      {
+        "id": 1,
+        "email": "example@example.com",
+        "image": "./something/image.jpg"
+      }
+    ]
+}
