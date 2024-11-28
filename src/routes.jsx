@@ -1,6 +1,7 @@
 import App from './components/App.jsx'
 //import CarouselContainer from './components/CarouselContainer.jsx';
 import ErrorPage from "./components/ErrorPage";
+import RequestFormContainer from "./components/RequestFormContainer";
 
 const appRoutes = [
     {
@@ -20,7 +21,7 @@ const appRoutes = [
     },
     {
       path: "/wishlist",
-      element: <ErrorPage />,
+      element: <RequestFormContainer />,
       errorElement: <ErrorPage />
     },
   ];
