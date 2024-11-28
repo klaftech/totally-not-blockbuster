@@ -1,28 +1,27 @@
 import App from './components/App.jsx'
-import Landing from './components/Landing'
-import CarouselContainer from './components/CarouselContainer.jsx';
-//import ErrorPage from "./pages/ErrorPage";
+//import CarouselContainer from './components/CarouselContainer.jsx';
+import ErrorPage from "./components/ErrorPage";
 
 const appRoutes = [
     {
       path: "/",
       element: <App />,
-      errorElement: <App />
+      errorElement: <ErrorPage />
     },
     {
       path: "/cart/:id",
-      element: <CarouselContainer />,
-      errorElement: <Landing />
+      element: <ErrorPage />,
+      errorElement: <ErrorPage />
     },
     {
       path: "/cart/:id/checkout",
-      element: <Landing />,
-      errorElement: <Landing />
+      element: <ErrorPage />,
+      errorElement: <ErrorPage />
     },
     {
       path: "/wishlist",
-      element: <Landing />,
-      errorElement: <Landing />
+      element: <ErrorPage />,
+      errorElement: <ErrorPage />
     },
   ];
 
