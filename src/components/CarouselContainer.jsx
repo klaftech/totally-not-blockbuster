@@ -5,7 +5,7 @@ import "../assets/css/carousel.css";
 //import placeholder from '../assets/placeholder.png'
 import CarouselItem from './CarouselItem';
 
-function CarouselSlider() {
+function CarouselContainer() {
     
     const baseUrl = "http://localhost:3000"
     const [movies, setMovies] = useState()
@@ -142,4 +142,4 @@ function CarouselSlider() {
     );
 };
 
-export default CarouselSlider;
+export default CarouselContainer;
