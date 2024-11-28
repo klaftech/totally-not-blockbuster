@@ -1,6 +1,14 @@
-function MovieButton({ text, movie, onClick }) {
+import Button from 'react-bootstrap/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
+function MovieButton({ btnVariant="light", btnDisabled=false, text, movie, onClick }) {
+    if(text === "likes"){
+        text = <div><FontAwesomeIcon color="red" icon={faHeart} /> {movie.likes}</div>
+    }
+    
     return (
-        <button onClick={() => onClick(movie)}>{text}</button>
+        <Button variant={btnVariant} onClick={() => onClick(movie)} disabled={btnDisabled}>{text}</Button>
     );
 }
 
