@@ -1,10 +1,9 @@
-import React from 'react';
+import NavBar from './NavBar'
 
-const Header = (props) => {
+function Header(props) {
     return (
-        <div>
-            <h1>This is the header</h1>
-            {props.children}
+        <div style={{paddingBottom: '50px'}}>
+            <NavBar />
         </div>
     );
 }

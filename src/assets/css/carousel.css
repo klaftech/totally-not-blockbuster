@@ -1,0 +1,15 @@
+.carousel-item-spacing {
+    padding: 0 10px; /* Horizontal spacing between items */
+    display: inline-block; 
+    text-align: center;
+}
+
+.carousel-item-spacing img {
+    width: 125px;
+    height: 200px; 
+}
+
+.movie-details {
+    background-color: lightgray; 
+    padding: 10px;
+}

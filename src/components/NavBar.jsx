@@ -1,21 +1,24 @@
 import { NavLink } from "react-router-dom";
-import "./../assets/css/NavBar.css";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-/* define the NavBar component */
 function NavBar() {
   return (
-    <nav>
-      <NavLink to="/" className="nav-link">
-        Charts
-      </NavLink>
-      <NavLink to="/wishlist" className="nav-link">
-        Wishlist
-      </NavLink>
-      <NavLink to="/cart" className="nav-link">
-        Cart
-      </NavLink>
-    </nav>
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand as={NavLink} to="/">Totally Not Blockbuster</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+            <Nav.Link as={NavLink} to="/wishlist">Wishlist</Nav.Link>
+            <Nav.Link as={NavLink} to="/cart">Cart</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
 export default NavBar;
