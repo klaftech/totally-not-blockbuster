@@ -1,10 +1,72 @@
+import {useState, useEffect} from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../assets/css/carousel.css";
 import placeholder from '../assets/placeholder.png'
+import CarouselItem from './CarouselItem';
 
 function CarouselSlider() {
     
+    const baseUrl = "http://localhost:3000"
+    const [movies, setMovies] = useState()
+    //console.log(movies)
+
+    useEffect(()=> {
+        fetch(`${baseUrl}/movies`)
+            .then(res => res.json())
+            .then(data => setMovies(data))
+    },[])
+
+    function updateMovies(specificMovie){
+        const updatedMovies = movies.map((movie) => {
+            if(movie.id === specificMovie.id){
+                return specificMovie
+            } else {
+                return movie
+            }
+        })
+        //console.log(updatedMovies)
+        setMovies(updatedMovies)
+    }
+
+    function handleBorrowButton(movie){
+        //TODO
+        //POST to cart
+        //POST available to movie
+        //setState 
+        console.log("borrowed")
+    }
+
+    function handleLikeButton(movie){
+        const obj = {
+            method: "PATCH",
+            header: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({"likes": movie.likes += 1})
+        }
+        console.log(obj)
+        fetch(`${baseUrl}/movies/${movie.id}`,obj)
+            .then(res => res.json())
+            .then(data => updateMovies(data))
+    }
+
+    if(!movies) return <div>Loading</div>
+    const moviesToDisplay = movies.map((movie,index) => {
+        return (
+            <CarouselItem 
+                key={index} 
+                movie={movie} 
+                onClickBorrow={handleBorrowButton} 
+                onClickLike={handleLikeButton} 
+            />
+        )
+    })
+
+
+    /////////////////////////////////////////////
+    // begin render carousel
+    /////////////////////////////////////////////
     const responsive = {
         superLargeDesktop: {
           breakpoint: { max: 4000, min: 3000 },
@@ -23,14 +85,15 @@ function CarouselSlider() {
           items: 1
         }
     };
-      
+
     return (
         <Carousel 
             responsive={responsive}
             centerMode={true}
             infinite={true}
+            transitionDuration={500}
             autoPlay={true}
-            autoPlaySpeed={2000}
+            autoPlaySpeed={1500}
             itemClass="carousel-item-spacing"
             //className=""
             //swipeable={true}
@@ -40,7 +103,6 @@ function CarouselSlider() {
             //autoPlay={this.props.deviceType !== "mobile" ? true : false}
             //keyBoardControl={true}
             //customTransition="all .5"
-            //transitionDuration={500}
             //containerClass="carousel-container"
             //containerClass={`w-full`}
             //removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -48,25 +110,7 @@ function CarouselSlider() {
             //dotListClass="custom-dot-list-style"
             //itemClass="carousel-item-padding-40-px"
         >
-            <div>
-                <img src={placeholder} />
-                <br></br>
-                <div className="movie-details">
-                    Item 1
-                    <br></br>
-                    Cast here
-                </div>
-            </div>
-            <div><img src={placeholder} /><br></br><div className="movie-details">Item 2<br></br>Cast here</div></div>
-            <div><img src={placeholder} /><br></br><div className="movie-details">Item 3<br></br>Cast here</div></div>
-            <div><img src={placeholder} /><br></br><div className="movie-details">Item 4<br></br>Cast here</div></div>
-            <div><img src={placeholder} /><br></br><div className="movie-details">Item 5<br></br>Cast here</div></div>
-            <div><img src={placeholder} /><br></br><div className="movie-details">Item 6<br></br>Cast here</div></div>
-            <div><img src={placeholder} /><br></br><div className="movie-details">Item 7<br></br>Cast here</div></div>
-            <div><img src={placeholder} /><br></br><div className="movie-details">Item 8<br></br>Cast here</div></div>
-            <div><img src={placeholder} /><br></br><div className="movie-details">Item 9<br></br>Cast here</div></div>
-            <div><img src={placeholder} /><br></br><div className="movie-details">Item 10<br></br>Cast here</div></div>
-            <div><img src={placeholder} /><br></br><div className="movie-details">Item 11<br></br>Cast here</div></div>
+            {moviesToDisplay}
         </Carousel>
     );
 };

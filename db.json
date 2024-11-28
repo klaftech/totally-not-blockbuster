@@ -1,113 +1,145 @@
 {
-    "orders": [
-      {
-        "id": 1,
-        "account": "ek",
-        "name": "Elchonon",
-        "stage": "cart",
-        "movies": [
-          "movie1",
-          "movie2",
-          "movie3",
-          "movie4"
-        ]
-      }
-    ],
-    "movies": [
-      {
-        "id": "1",
-        "name": "The Shawshank Redemption",
-        "cast": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"],
-        "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-        "image": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
-        "price": 3.99,
-        "quantity": 50,
-        "likes": 1524,
-        "available": true
-      },
-      {
-        "id": "2",
-        "name": "The Godfather",
-        "cast": ["Marlon Brando", "Al Pacino", "James Caan"],
-        "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-        "image": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-        "price": 4.99,
-        "quantity": 40,
-        "likes": 2345,
-        "available": true
-      },
-      {
-        "id": "3",
-        "name": "The Dark Knight",
-        "cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
-        "description": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
-        "image": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-        "price": 3.49,
-        "quantity": 70,
-        "likes": 3002,
-        "available": true
-      },
-      {
-        "id": "4",
-        "name": "Pulp Fiction",
-        "cast": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
-        "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-        "image": "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
-        "price": 2.99,
-        "quantity": 60,
-        "likes": 1893,
-        "available": true
-      },
-      {
-        "id": "5",
-        "name": "Forrest Gump",
-        "cast": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
-        "description": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man.",
-        "image": "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
-        "price": 3.99,
-        "quantity": 80,
-        "likes": 2714,
-        "available": true
-      },
-      {
-        "id": "6",
-        "name": "Inception",
-        "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
-        "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
-        "image": "https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
-        "price": 4.49,
-        "quantity": 45,
-        "likes": 3218,
-        "available": true
-      },
-      {
-        "id": "7",
-        "name": "The Matrix",
-        "cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
-        "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
-        "image": "https://image.tmdb.org/t/p/w500/p96dm7sCMn4VYAStA6siNz30G1r.jpg",
-        "price": 3.49,
-        "quantity": 55,
-        "likes": 2981,
-        "available": true
-      },
-      {
-        "id": "8",
-        "name": "Interstellar",
-        "cast": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-        "image": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-        "price": 4.99,
-        "quantity": 35,
-        "likes": 3456,
-        "available": true
-      }
-    ],
-    "wishlist": [
-      {
-        "id": 1,
-        "email": "example@example.com",
-        "image": "./something/image.jpg"
-      }
-    ]
+  "orders": [
+    {
+      "id": "1",
+      "account": "ek",
+      "name": "Elchonon",
+      "stage": "cart",
+      "movies": [
+        "movie1",
+        "movie2",
+        "movie3",
+        "movie4"
+      ]
+    }
+  ],
+  "movies": [
+    {
+      "id": "1",
+      "name": "The Shawshank Redemption",
+      "cast": [
+        "Tim Robbins",
+        "Morgan Freeman",
+        "Bob Gunton"
+      ],
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "image": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+      "price": 3.99,
+      "quantity": 50,
+      "likes": 1526,
+      "available": true
+    },
+    {
+      "id": "2",
+      "name": "The Godfather",
+      "cast": [
+        "Marlon Brando",
+        "Al Pacino",
+        "James Caan"
+      ],
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "image": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+      "price": 4.99,
+      "quantity": 40,
+      "likes": 2348,
+      "available": true
+    },
+    {
+      "id": "3",
+      "name": "The Dark Knight",
+      "cast": [
+        "Christian Bale",
+        "Heath Ledger",
+        "Aaron Eckhart"
+      ],
+      "description": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
+      "image": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+      "price": 3.49,
+      "quantity": 70,
+      "likes": 3006,
+      "available": true
+    },
+    {
+      "id": "4",
+      "name": "Pulp Fiction",
+      "cast": [
+        "John Travolta",
+        "Uma Thurman",
+        "Samuel L. Jackson"
+      ],
+      "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "image": "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+      "price": 2.99,
+      "quantity": 60,
+      "likes": 1897,
+      "available": true
+    },
+    {
+      "id": "5",
+      "name": "Forrest Gump",
+      "cast": [
+        "Tom Hanks",
+        "Robin Wright",
+        "Gary Sinise"
+      ],
+      "description": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man.",
+      "image": "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+      "price": 3.99,
+      "quantity": 80,
+      "likes": 2715,
+      "available": true
+    },
+    {
+      "id": "6",
+      "name": "Inception",
+      "cast": [
+        "Leonardo DiCaprio",
+        "Joseph Gordon-Levitt",
+        "Elliot Page"
+      ],
+      "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
+      "image": "https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+      "price": 4.49,
+      "quantity": 45,
+      "likes": 3218,
+      "available": true
+    },
+    {
+      "id": "7",
+      "name": "The Matrix",
+      "cast": [
+        "Keanu Reeves",
+        "Laurence Fishburne",
+        "Carrie-Anne Moss"
+      ],
+      "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+      "image": "https://image.tmdb.org/t/p/w500/p96dm7sCMn4VYAStA6siNz30G1r.jpg",
+      "price": 3.49,
+      "quantity": 55,
+      "likes": 2983,
+      "available": true
+    },
+    {
+      "id": "8",
+      "name": "Interstellar",
+      "cast": [
+        "Matthew McConaughey",
+        "Anne Hathaway",
+        "Jessica Chastain"
+      ],
+      "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "image": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+      "price": 4.99,
+      "quantity": 35,
+      "likes": 3459,
+      "available": true
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "1",
+      "email": "example@example.com",
+      "image": "./something/image.jpg"
+    }
+  ]
 }
