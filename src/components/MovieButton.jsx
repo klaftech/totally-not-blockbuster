@@ -3,6 +3,7 @@
 import Button from 'react-bootstrap/Button';
 
 //fontawesome package
+//https://fontawesome.com/icons/heart?s=solid
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 

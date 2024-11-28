@@ -55,39 +55,42 @@ function RequestFormContainer() {
     return (
         <>
             <Header />
-            <Form onSubmit={onSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control onChange={onChange} value={formData.email} name="email" type="email" placeholder="Enter email" />
-                    <Form.Text className="text-muted">
-                    Please enter your email address to get notified when movie is available.
-                    </Form.Text>
-                </Form.Group>
+            <div style={{padding: "7%"}}>
+                <h3>Movie Wishlist Request Form</h3>
+                <Form onSubmit={onSubmit}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control onChange={onChange} value={formData.email} name="email" type="email" placeholder="Enter email" />
+                        {/* <Form.Text className="text-muted">
+                        Please enter your email address to get notified when movie is available.
+                        </Form.Text> */}
+                    </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicMovieName">
-                    <Form.Label>Movie Name</Form.Label>
-                    <Form.Control onChange={onChange} value={formData.name} name="name" type="text" placeholder="Enter Movie Name" />
-                    <Form.Text className="text-muted">
-                    Please enter movie name.
-                    </Form.Text>
-                </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicMovieName">
+                        <Form.Label>Movie Name</Form.Label>
+                        <Form.Control onChange={onChange} value={formData.name} name="name" type="text" placeholder="Enter Movie Name" />
+                        {/* <Form.Text className="text-muted">
+                        Please enter movie name.
+                        </Form.Text> */}
+                    </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicMovieImage">
-                    <Form.Label>Movie Image</Form.Label>
-                    <Form.Control onChange={onChange} value={formData.image} name="image" type="text" placeholder="Enter Movie Image Link" />
-                    <Form.Text className="text-muted">
-                    Please enter link to movie image.
-                    </Form.Text>
-                </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicMovieImage">
+                        <Form.Label>Movie Image</Form.Label>
+                        <Form.Control onChange={onChange} value={formData.image} name="image" type="text" placeholder="Enter Movie Image Link" />
+                        {/* <Form.Text className="text-muted">
+                        Please enter link to movie image.
+                        </Form.Text> */}
+                    </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check onChange={onChange} name="agree" type="checkbox" label="I agree to the Terms & Conditions of this website." />
-                </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Check onChange={onChange} name="agree" type="checkbox" label="I agree to the Terms & Conditions of this website." />
+                    </Form.Group>
 
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-            </Form>
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
+            </div>
         </>
     );
 }
