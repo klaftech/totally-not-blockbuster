@@ -5,73 +5,8 @@ import "../assets/css/carousel.css";
 //import placeholder from '../assets/placeholder.png'
 import CarouselItem from './CarouselItem';
 
-function CarouselContainer() {
+function CarouselContainer({ cart, setCart, movies, setMovies, onLikeButton, onBorrowButton }) {
     
-    const baseUrl = "http://localhost:3000"
-    const [movies, setMovies] = useState()
-    const [cart, setCart] = useState()
-
-    useEffect(()=> {
-        //load movies
-        fetch(`${baseUrl}/movies`)
-            .then(res => res.json())
-            .then(data => setMovies(data))
-        
-        //load active cart
-        fetch(`${baseUrl}/orders/1`)
-            .then(res => res.json())
-            .then(data => setCart(data))
-    },[])
-
-    //set state with updated movie object
-    function updateMovies(specificMovie){
-        const updatedMovies = movies.map((movie) => {
-            if(movie.id === specificMovie.id){
-                return specificMovie
-            } else {
-                return movie
-            }
-        })
-        setMovies(updatedMovies)
-    }
-
-    //factory function to generate PATCH params object
-    function PatchObj(obj){
-        return {
-            method: "PATCH",
-            header: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(obj)
-        }
-    }
-
-    //handle borrow click: 
-    //1. duplicate cart movies array, push in selected movie
-    //2. PATCH request to update cart in db
-    //3. update cart in state (and re-render)
-    function handleBorrowButton(movie){
-        const newCartMovies = [...cart.movies]
-        newCartMovies.push(movie.id)
-        
-        const obj = PatchObj({"movies": newCartMovies})
-        fetch(`${baseUrl}/orders/${cart.id}`,obj)
-            .then(res => res.json())
-            .then(data => {
-                setCart(data)
-            })
-    }
-
-    //handle like click:
-    //1. PATCH request to update movie in db
-    //2. update movie in state (and re-render)
-    function handleLikeButton(movie){
-        const obj = PatchObj({"likes": movie.likes + 1})
-        fetch(`${baseUrl}/movies/${movie.id}`,obj)
-            .then(res => res.json())
-            .then(data => updateMovies(data))
-    }
-
     //show loading if fetch promises are not yet fulfilled into state
     if(!movies) return <div>Loading Movies</div>
     if(!cart) return <div>Loading Cart</div>
@@ -84,8 +19,8 @@ function CarouselContainer() {
                 key={index} 
                 isCarted={isCarted}
                 movie={movie}
-                onClickBorrow={handleBorrowButton} 
-                onClickLike={handleLikeButton} 
+                onClickBorrow={onBorrowButton} 
+                onClickLike={onLikeButton} 
             />
         )
     })

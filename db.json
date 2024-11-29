@@ -7,7 +7,8 @@
       "stage": "cart",
       "movies": [
         "2",
-        "5"
+        "5",
+        "4"
       ]
     }
   ],
@@ -69,7 +70,7 @@
       "image": "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
       "price": 2.99,
       "quantity": 60,
-      "likes": 1908,
+      "likes": 1913,
       "available": true
     },
     {
