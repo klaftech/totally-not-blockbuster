@@ -10,7 +10,9 @@
         "7",
         "2",
         "3",
-        "4"
+        "4",
+        "8",
+        "1"
       ]
     }
   ],
@@ -27,7 +29,7 @@
       "image": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
       "price": 3.99,
       "quantity": 50,
-      "likes": 1526,
+      "likes": 1530,
       "available": true
     },
     {
@@ -42,7 +44,7 @@
       "image": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
       "price": 4.99,
       "quantity": 40,
-      "likes": 2348,
+      "likes": 2350,
       "available": true
     },
     {
@@ -132,7 +134,7 @@
       "image": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
       "price": 4.99,
       "quantity": 35,
-      "likes": 3465,
+      "likes": 3467,
       "available": true
     }
   ],
