@@ -1,24 +1,23 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Layout from './Layout'
-import Header from './Header';
+import ErrorPage from './ErrorPage';
 import CarouselContainer from './CarouselContainer';
 import CartContainer from './CartContainer';
 import RequestFormContainer from './RequestFormContainer';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<CarouselContainer />} />
-            <Route path="/wishlist" element={<RequestFormContainer />} />
-            <Route path="/cart" element={<CartContainer />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />} errorElement={<ErrorPage />} >
+          <Route index element={<CarouselContainer />} errorElement={<ErrorPage />} />
+          <Route path="/wishlist" element={<RequestFormContainer />} errorElement={<ErrorPage />} />
+          <Route path="/cart" element={<CartContainer />} errorElement={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} /> {/* Catch-all route */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
