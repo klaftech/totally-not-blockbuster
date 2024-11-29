@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Header from './Header'
 
 function CartContainer() {
     
@@ -54,13 +53,10 @@ function CartContainer() {
     })
 
     return (
-        <>
-            <Header />
-            <div style={{padding: "7%"}}>
-                Under Construction
-                {movieNames}
-            </div>
-        </>
+        <div style={{padding: "7%"}}>
+            Under Construction
+            {movieNames}
+        </div>
     );
 }
 
