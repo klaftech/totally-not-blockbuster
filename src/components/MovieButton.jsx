@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 //bootstrap button theme
 //usage: https://react-bootstrap.netlify.app/docs/components/buttons/
 import Button from 'react-bootstrap/Button';
@@ -9,12 +11,28 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 function MovieButton({ btnVariant="light", btnDisabled=false, text, movie, onClick }) {
     
+    const [isClicked, setClicked] = useState(false)
+
+    function toggleColor(){
+        setClicked(true)
+        setTimeout(()=>setClicked(false), 1500)
+    }
+
     if(text === "likes"){
-        text = <div><FontAwesomeIcon color="red" icon={faHeart} /> {movie.likes}</div>
+        text = <div><FontAwesomeIcon color={(isClicked) ? "red" : "black"} icon={faHeart} /> {movie.likes}</div>
     }
     
     return (
-        <Button variant={btnVariant} onClick={() => onClick(movie)} disabled={btnDisabled}>{text}</Button>
+        <Button 
+            variant={btnVariant} 
+            disabled={btnDisabled}
+            onClick={() => {
+                onClick(movie)
+                toggleColor()
+            }} 
+        >
+            {text}
+        </Button>
     );
 }
 
