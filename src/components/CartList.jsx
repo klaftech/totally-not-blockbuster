@@ -10,7 +10,7 @@ return(
 {movie.name}
 {movie.cast}
 {movie.descripition}
-<button onClick={() => removeFromCart(movie.linkId)}>Remove</button>
+<button onClick={() => removeFromCart(movie)}>Remove</button>
 </li>
 
 )}
