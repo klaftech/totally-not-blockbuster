@@ -1,16 +1,6 @@
 import CartList from "./CartList";
 
-function CartContainer({ cart, moviesInCart, removeFromCart }) {
-console.log("s",moviesInCart)
-    //function CartContainer({cart, setCart}) {
-  
-    function setCart(){
-      console.log("function failed, pending logic rewrite")
-    }
-  
-    // const removeFromCart =(id) =>{
-    // setCart((prevCart) => prevCart.filter((movie) => movie.id !== id))
-    // }
+function CartContainer({ moviesInCart, removeFromCart }) {  
     return(
         <div>
             <h2>Your Cart</h2>

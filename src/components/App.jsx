@@ -79,18 +79,15 @@ function App() {
     }
 
     function handleRemoveFromCart(movieObj) {
-      
       //delete from db
-      //remove from moviesInCart
-      //remove from cart
-      
-      //TODO; remove from Cart as well, or move carousel loading away from cart
       const obj = CreateRequestObj("DELETE",{})
       fetch(`${baseUrl}/items/${movieObj.linkId}`,obj)
       
       const newMoviesInCart = moviesInCart.filter((movie) => movie.id !== movieObj.id)
-      console.log("NMIC",newMoviesInCart)
+      //remove from moviesInCart
       setMoviesInCart(newMoviesInCart)
+
+      //remove from cart
       removeCartMovie(movieObj)
     }
     
