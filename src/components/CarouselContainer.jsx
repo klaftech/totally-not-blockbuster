@@ -114,6 +114,7 @@ function CarouselContainer() {
     };
 
     return (
+        
         <Carousel 
             responsive={responsive}
             centerMode={true}
@@ -139,6 +140,8 @@ function CarouselContainer() {
         >
             {moviesToDisplay}
         </Carousel>
+        
+        
     );
 };
 
