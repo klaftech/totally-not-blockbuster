@@ -2,7 +2,7 @@ import MovieButton from './MovieButton';
 
 function CarouselItem({ isCarted, movie, onClickBorrow, onClickLike }) {
     let borrowBtnDisabled = false
-    let borrowBtnText = "borrow"
+    let borrowBtnText = "Borrow"
 
     if(isCarted){
         borrowBtnDisabled = true;
@@ -10,7 +10,7 @@ function CarouselItem({ isCarted, movie, onClickBorrow, onClickLike }) {
     } else {
         if(!movie.available){
             borrowBtnDisabled = true;
-            borrowBtnText = "Sold Out";
+            borrowBtnText = "Unavailable";
         }
     }
     return (

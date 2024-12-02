@@ -7,7 +7,7 @@ import CarouselItem from './CarouselItem';
 
 function CarouselContainer() {
     
-    const baseUrl = "http://localhost:3000"
+    const baseUrl = "http://localhost:3500"
     const [movies, setMovies] = useState()
     const [cart, setCart] = useState()
 
