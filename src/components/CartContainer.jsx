@@ -10,6 +10,8 @@ function CartContainer({ cart, moviesInCart, removeFromCart }) {
     // const removeFromCart =(id) =>{
     // setCart((prevCart) => prevCart.filter((movie) => movie.id !== id))
     // }
+
+function CartContainer({ moviesInCart, removeFromCart }) {  
     return(
         <div>
             <h2 className="cart-container">Your Cart</h2>
