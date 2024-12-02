@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react'
 
 function CartContainer({ cart, moviesInCart }) {
         
-    if(moviesInCart) {
-        console.log("cart: cart ",moviesInCart)
-    } else {
-        console.log("cart: still loading cart")
-    }
+    // if(moviesInCart) {
+    //     console.log("cart: cart ",moviesInCart)
+    // } else {
+    //     console.log("cart: still loading cart")
+    // }
 
     //show loading if all objects are not yet in state
     if(!moviesInCart) return <div>Cart Loading...</div>

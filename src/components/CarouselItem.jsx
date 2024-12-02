@@ -2,7 +2,7 @@ import MovieButton from './MovieButton';
 
 function CarouselItem({ isCarted, movie, onClickBorrow, onClickLike }) {
     let borrowBtnDisabled = false
-    let borrowBtnText = "borrow"
+    let borrowBtnText = "Borrow"
 
     if(isCarted){
         borrowBtnDisabled = true;

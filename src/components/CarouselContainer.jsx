@@ -1,11 +1,10 @@
-import {useState, useEffect} from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../assets/css/carousel.css";
 //import placeholder from '../assets/placeholder.png'
 import CarouselItem from './CarouselItem';
 
-function CarouselContainer({ cart, setCart, movies, setMovies, onLikeButton, onBorrowButton }) {
+function CarouselContainer({ cart, movies, onLikeButton, onBorrowButton }) {
     
     //show loading if fetch promises are not yet fulfilled into state
     if(!movies) return <div>Loading Movies</div>
@@ -13,7 +12,7 @@ function CarouselContainer({ cart, setCart, movies, setMovies, onLikeButton, onB
 
     //build carousel items
     const moviesToDisplay = movies.map((movie,index) => {
-        const isCarted = cart.movies.find((cartMovie) => cartMovie === movie.id);
+        const isCarted = cart.items.find((cartMovie) => cartMovie.movieId === movie.id);
         return (
             <CarouselItem 
                 key={index} 
