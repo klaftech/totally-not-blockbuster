@@ -24,7 +24,10 @@ function App() {
       //load active cart
       fetch(`${baseUrl}/orders/1?_embed=items`)
         .then(res => res.json())
-        .then(data => setCart(data))
+        .then(data => {
+          setCart(data)
+          //console.log("RAW CART",data)
+        })
         .catch(error => console.log('error fetching cart data: ',error))
     },[])
 
@@ -46,6 +49,7 @@ function App() {
           //     return result;
           // }, {});
           
+          //console.log("RAW CART MOVIES",cartMoviesArray)
           setMoviesInCart(cartMoviesArray)
       }    
     },[cart,movies])
@@ -64,18 +68,23 @@ function App() {
     }
 
     //set state with updated cart object, when adding cart item
-    function addCartMovies(movieItem){
-        const newCart = {...cart}
-        newCart.items = [...cart.items,movieItem]
-        setCart(newCart)
+    function addCartMovieItem(movieItem){
+      const newCart = {...cart}
+      newCart.items = [...cart.items,movieItem]
+      setCart(newCart)
     }
 
     //set state with movie removed, when removing item from cart
-    function removeCartMovie(movieItem){
+    function removeCartMovieItem(movieItem){
+      //update moviesInCart
+      const newMoviesInCart = moviesInCart.filter((movie) => movie.id !== movieItem.id)
+      setMoviesInCart(newMoviesInCart)
+
+      //update cart
       const newCart = {...cart}
-      const tr = newCart.items.filter((movie) => movie.id !== movieItem.id)
-      console.log(tr)
-      //setCart(newCart)
+      const moviesArray = cart.items.filter((link) => link.movieId !== movieItem.id)
+      newCart.items = moviesArray
+      setCart(newCart)
     }
 
     function handleRemoveFromCart(movieObj) {
@@ -83,12 +92,8 @@ function App() {
       const obj = CreateRequestObj("DELETE",{})
       fetch(`${baseUrl}/items/${movieObj.linkId}`,obj)
       
-      const newMoviesInCart = moviesInCart.filter((movie) => movie.id !== movieObj.id)
-      //remove from moviesInCart
-      setMoviesInCart(newMoviesInCart)
-
       //remove from cart
-      removeCartMovie(movieObj)
+      removeCartMovieItem(movieObj)
     }
     
     //factory function to generate PATCH params object
@@ -111,7 +116,7 @@ function App() {
         fetch(`${baseUrl}/items`,obj)
             .then(res => res.json())
             .then(data => {
-              addCartMovies(data)
+              addCartMovieItem(data)
             })
     }
 
