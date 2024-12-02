@@ -1,7 +1,8 @@
 import App from './components/App.jsx'
 //import CarouselContainer from './components/CarouselContainer.jsx';
-import ErrorPage from "./components/ErrorPage";
 import RequestFormContainer from "./components/RequestFormContainer";
+import CartContainer from './components/CartContainer';
+import ErrorPage from "./components/ErrorPage";
 
 const appRoutes = [
     {
@@ -9,6 +10,17 @@ const appRoutes = [
       element: <App />,
       errorElement: <ErrorPage />
     },
+    {
+      path: "/wishlist",
+      element: <RequestFormContainer />,
+      errorElement: <ErrorPage />
+    },
+    {
+      path: "/cart",
+      element: <CartContainer />,
+      errorElement: <ErrorPage />
+    },
+    /*
     {
       path: "/cart/:id",
       element: <ErrorPage />,
@@ -18,12 +30,8 @@ const appRoutes = [
       path: "/cart/:id/checkout",
       element: <ErrorPage />,
       errorElement: <ErrorPage />
-    },
-    {
-      path: "/wishlist",
-      element: <RequestFormContainer />,
-      errorElement: <ErrorPage />
-    },
+    }
+    */
   ];
 
 export default appRoutes;

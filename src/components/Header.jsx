@@ -1,6 +1,6 @@
 import NavBar from './NavBar'
 
-function Header(props) {
+function Header() {
     return (
         <div style={{paddingBottom: '50px'}}>
             <NavBar />
