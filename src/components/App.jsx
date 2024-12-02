@@ -31,13 +31,22 @@ function App() {
     useEffect(()=> {      
       //once we have cart and movies loaded, we can create object including all movies in cart
       if(cart && movies){
-          const cartMoviesArray = movies.filter((movie) => {
-              const found = cart.items.find((element) => element.movieId === movie.id)
-              if (found) {
-                  return true
-              } else {
-                  return false
-              }
+          // const cartMoviesArray = movies.filter((movie) => {
+          //     const found = cart.items.find((element) => element.movieId === movie.id)
+          //     if (found) {
+          //         return true
+          //     } else {
+          //         return false
+          //     }
+          // })
+
+          const cartMoviesArray = cart.items.map((link) => {
+            const movie = movies.find((element) => element.id === link.movieId)
+            return {
+              linkId: link.id,
+              orderId: link.orderId,
+              ...movie
+            }
           })
           
           //convert arrayOfObjects to objectofObjects
@@ -64,10 +73,30 @@ function App() {
     }
 
     //set state with updated cart object, when adding cart item
-    function updateCartMovies(movieItem){
+    function addCartMovies(movieItem){
         const newCart = {...cart}
         newCart.items = [...cart.items,movieItem]
         setCart(newCart)
+    }
+
+    function removeCartMovies(movieItem){
+      const newCart = {...cart}
+      newCart.items = [...cart.items,movieItem]
+      setCart(newCart)
+    }
+
+    function handleRemoveFromCart(linkId) {
+      
+      //delete from db
+      //remove from moviesInCart
+      //remove from cart
+      
+      const obj = CreateRequestObj("DELETE",{})
+      fetch(`${baseUrl}/items/${linkId}`,obj)
+      console.log(moviesInCart)
+      setMoviesInCart((prevCart) => prevCart.filter((movie) => movie.movieId !== movieId))
+      console.log(moviesInCart)
+      //setCart((prevCart) => prevCart.filter((movie) => movie.id !== id))
     }
     
     //factory function to generate PATCH params object
@@ -90,7 +119,7 @@ function App() {
         fetch(`${baseUrl}/items`,obj)
             .then(res => res.json())
             .then(data => {
-              updateCartMovies(data)
+              addCartMovies(data)
             })
     }
 
@@ -103,14 +132,14 @@ function App() {
             .then(res => res.json())
             .then(data => updateMovies(data))
     }
-
+  
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />} errorElement={<ErrorPage />} >
           <Route index element={<CarouselContainer cart={cart} movies={movies} onLikeButton={handleLikeButton} onBorrowButton={handleBorrowButton} />} errorElement={<ErrorPage />} />
           <Route path="/wishlist" element={<RequestFormContainer />} errorElement={<ErrorPage />} />
-          <Route path="/cart" element={<CartContainer cart={cart} moviesInCart={moviesInCart} />} errorElement={<ErrorPage />} />
+          <Route path="/cart" element={<CartContainer cart={cart} moviesInCart={moviesInCart} removeFromCart={handleRemoveFromCart} />} errorElement={<ErrorPage />} />
           <Route path="*" element={<ErrorPage />} /> {/* Catch-all route */}
         </Route>
       </Routes>

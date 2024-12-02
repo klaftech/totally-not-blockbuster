@@ -6,11 +6,6 @@ import App from './components/App'
 //bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//import react-router functions
-//import { createBrowserRouter, RouterProvider } from "react-router-dom";
-//import appRoutes from './routes.jsx'
-//const router = createBrowserRouter(appRoutes)
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <RouterProvider router={router} /> */}
