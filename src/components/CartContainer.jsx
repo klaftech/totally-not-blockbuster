@@ -4,7 +4,7 @@ function CartContainer({ moviesInCart, removeFromCart }) {
     return(
         <div>
             <h2>Your Cart</h2>
-            <CartList cart={cart} moviesInCart={moviesInCart} removeFromCart={removeFromCart} />
+            <CartList moviesInCart={moviesInCart} removeFromCart={removeFromCart} />
         </div>
 
     )
