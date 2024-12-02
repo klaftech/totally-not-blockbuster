@@ -1,11 +1,5 @@
 {
-  "items": [
-    {
-      "id": "002f",
-      "orderId": "1",
-      "movieId": "2"
-    }
-  ],
+  "items": [],
   "orders": [
     {
       "id": "1",
@@ -40,7 +34,7 @@
       "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
       "image": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
       "quantity": 40,
-      "likes": 2348,
+      "likes": 2349,
       "available": true
     },
     {
