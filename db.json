@@ -1,11 +1,5 @@
 {
-  "items": [
-    {
-      "id": "21c3",
-      "orderId": "1",
-      "movieId": "2"
-    }
-  ],
+  "items": [],
   "orders": [
     {
       "id": "1",

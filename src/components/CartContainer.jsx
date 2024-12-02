@@ -3,9 +3,9 @@ import CartList from "./CartList";
 function CartContainer({ cart, moviesInCart, removeFromCart }) {
 //function CartContainer({cart, setCart}) {
   
-    function setCart(){
-      console.log("function failed, pending logic rewrite")
-    }
+    // function setCart(){
+    //   console.log("function failed, pending logic rewrite")
+    // }
   
     // const removeFromCart =(id) =>{
     // setCart((prevCart) => prevCart.filter((movie) => movie.id !== id))
