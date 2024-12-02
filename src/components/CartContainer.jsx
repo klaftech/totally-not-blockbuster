@@ -1,6 +1,6 @@
 import CartList from "./CartList";
 import "../assets/css/cart-container.css"
-function CartContainer({ cart, moviesInCart, removeFromCart }) {
+
 //function CartContainer({cart, setCart}) {
   
     // function setCart(){
