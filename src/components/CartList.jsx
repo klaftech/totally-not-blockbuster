@@ -1,5 +1,5 @@
 function CartList({ moviesInCart, removeFromCart}) {
-if (!moviesInCart){
+if ((!Array.isArray(moviesInCart)) || ((Array.isArray(moviesInCart)) && (moviesInCart.length === 0))){
     return <div>Your cart is empty. Borrow a movie to fill it!</div>
 }
 return(
