@@ -1,6 +1,8 @@
-function CartList({cart, moviesInCart, removeFromCart}) {
-if (!moviesInCart){
-    return <div>Your cart is empty. Borrow a movie to fill it!</div>
+function CartList({moviesInCart, removeFromCart}) {
+console.log("SSS",Array.isArray(moviesInCart))
+
+    if ((!Array.isArray(moviesInCart)) || ((Array.isArray(moviesInCart)) && (moviesInCart.length === 0))){
+        return <div>Your cart is empty. Borrow a movie to fill it!</div>
 }
 return(
 <div>
