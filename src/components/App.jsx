@@ -85,18 +85,18 @@ function App() {
       setCart(newCart)
     }
 
-    function handleRemoveFromCart(linkId) {
+    function handleRemoveFromCart(movieObj) {
       
       //delete from db
       //remove from moviesInCart
       //remove from cart
       
+      //TODO; remove from Cart as well, or move carousel loading away from cart
       const obj = CreateRequestObj("DELETE",{})
-      fetch(`${baseUrl}/items/${linkId}`,obj)
-      console.log(moviesInCart)
-      setMoviesInCart((prevCart) => prevCart.filter((movie) => movie.movieId !== movieId))
-      console.log(moviesInCart)
-      //setCart((prevCart) => prevCart.filter((movie) => movie.id !== id))
+      fetch(`${baseUrl}/items/${movieObj.linkId}`,obj)
+      
+      const newMoviesInCart = moviesInCart.filter((movie) => movie.id !== movieObj.id)
+      setMoviesInCart(newMoviesInCart)
     }
     
     //factory function to generate PATCH params object
