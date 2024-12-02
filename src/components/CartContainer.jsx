@@ -1,7 +1,8 @@
 import CartList from "./CartList";
 
 function CartContainer({ cart, moviesInCart, removeFromCart }) {
-//function CartContainer({cart, setCart}) {
+console.log("s",moviesInCart)
+    //function CartContainer({cart, setCart}) {
   
     function setCart(){
       console.log("function failed, pending logic rewrite")

@@ -31,15 +31,6 @@ function App() {
     useEffect(()=> {      
       //once we have cart and movies loaded, we can create object including all movies in cart
       if(cart && movies){
-          // const cartMoviesArray = movies.filter((movie) => {
-          //     const found = cart.items.find((element) => element.movieId === movie.id)
-          //     if (found) {
-          //         return true
-          //     } else {
-          //         return false
-          //     }
-          // })
-
           const cartMoviesArray = cart.items.map((link) => {
             const movie = movies.find((element) => element.id === link.movieId)
             return {
@@ -79,10 +70,12 @@ function App() {
         setCart(newCart)
     }
 
-    function removeCartMovies(movieItem){
+    //set state with movie removed, when removing item from cart
+    function removeCartMovie(movieItem){
       const newCart = {...cart}
-      newCart.items = [...cart.items,movieItem]
-      setCart(newCart)
+      const tr = newCart.items.filter((movie) => movie.id !== movieItem.id)
+      console.log(tr)
+      //setCart(newCart)
     }
 
     function handleRemoveFromCart(movieObj) {
@@ -96,7 +89,9 @@ function App() {
       fetch(`${baseUrl}/items/${movieObj.linkId}`,obj)
       
       const newMoviesInCart = moviesInCart.filter((movie) => movie.id !== movieObj.id)
+      console.log("NMIC",newMoviesInCart)
       setMoviesInCart(newMoviesInCart)
+      removeCartMovie(movieObj)
     }
     
     //factory function to generate PATCH params object
@@ -137,7 +132,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />} errorElement={<ErrorPage />} >
-          <Route index element={<CarouselContainer cart={cart} movies={movies} onLikeButton={handleLikeButton} onBorrowButton={handleBorrowButton} />} errorElement={<ErrorPage />} />
+          <Route index element={<CarouselContainer cart={cart} movies={movies} moviesInCart={moviesInCart} onLikeButton={handleLikeButton} onBorrowButton={handleBorrowButton} />} errorElement={<ErrorPage />} />
           <Route path="/wishlist" element={<RequestFormContainer />} errorElement={<ErrorPage />} />
           <Route path="/cart" element={<CartContainer cart={cart} moviesInCart={moviesInCart} removeFromCart={handleRemoveFromCart} />} errorElement={<ErrorPage />} />
           <Route path="*" element={<ErrorPage />} /> {/* Catch-all route */}
