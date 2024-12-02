@@ -48,6 +48,7 @@ function CarouselContainer({ cart, movies, onLikeButton, onBorrowButton }) {
     };
 
     return (
+        
         <Carousel 
             responsive={responsive}
             centerMode={true}
@@ -73,6 +74,8 @@ function CarouselContainer({ cart, movies, onLikeButton, onBorrowButton }) {
         >
             {moviesToDisplay}
         </Carousel>
+        
+        
     );
 };
 

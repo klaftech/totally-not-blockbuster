@@ -10,7 +10,7 @@ function CarouselItem({ isCarted, movie, onClickBorrow, onClickLike }) {
     } else {
         if(!movie.available){
             borrowBtnDisabled = true;
-            borrowBtnText = "Sold Out";
+            borrowBtnText = "Unavailable";
         }
     }
     return (

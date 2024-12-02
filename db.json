@@ -25,7 +25,6 @@
       ],
       "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
       "image": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
-      "price": 3.99,
       "quantity": 50,
       "likes": 1530,
       "available": true
@@ -40,7 +39,6 @@
       ],
       "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
       "image": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-      "price": 4.99,
       "quantity": 40,
       "likes": 2354,
       "available": true
@@ -55,7 +53,6 @@
       ],
       "description": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
       "image": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-      "price": 3.49,
       "quantity": 70,
       "likes": 3012,
       "available": true
@@ -70,9 +67,8 @@
       ],
       "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
       "image": "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
-      "price": 2.99,
       "quantity": 60,
-      "likes": 1913,
+      "likes": 1906,
       "available": true
     },
     {
@@ -85,7 +81,6 @@
       ],
       "description": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man.",
       "image": "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
-      "price": 3.99,
       "quantity": 80,
       "likes": 2726,
       "available": true
@@ -100,7 +95,6 @@
       ],
       "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
       "image": "https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
-      "price": 4.49,
       "quantity": 45,
       "likes": 3234,
       "available": false
@@ -115,7 +109,6 @@
       ],
       "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
       "image": "https://image.tmdb.org/t/p/w500/p96dm7sCMn4VYAStA6siNz30G1r.jpg",
-      "price": 3.49,
       "quantity": 55,
       "likes": 2997,
       "available": true
@@ -130,9 +123,120 @@
       ],
       "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
       "image": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-      "price": 4.99,
       "quantity": 35,
       "likes": 3473,
+      "available": true
+    },
+    {
+      "id": "9",
+      "name": "Summer Wars",
+      "cast": [
+        "Ryuunosuke Kamiki",
+        "Nanami Sakuraba",
+        "Mitsuki Tanimura"
+      ],
+      "description": "A math whiz who accidentally causes a collision between a parallel world and Earth.",
+      "image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5681-3DmxUVn3grD0.jpg",
+      "quantity": 40,
+      "likes": 2500,
+      "available": true
+    },
+    {
+      "id": "10",
+      "name": "Millennium Actress",
+      "cast": [
+        "Miyoko Shouji",
+        "Shouzou Iizuka",
+        "Masaya Onosaka"
+      ],
+      "description": "A TV interviewer and his cameraman who meet a reclusive former actress and travel through her memories and career.",
+      "image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1033-d5p1pbd5qa4L.png",
+      "quantity": 30,
+      "likes": 3200,
+      "available": true
+    },
+    {
+      "id": "11",
+      "name": "Perfect Blue",
+      "cast": [
+        "Junko Iwao",
+        "Rica Matsumoto",
+        "Masaaki Ohkura"
+      ],
+      "description": "A Japanese singer who leaves her J-pop group to become an actress, and the consequences of her decision.",
+      "image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx437-moJoeSWPuAIS.jpg",
+      "quantity": 60,
+      "likes": 4000,
+      "available": true
+    },
+    {
+      "id": "12",
+      "name": "Paprika",
+      "cast":[
+        "Megumi Hayashibara",
+        "Tooru Furuya",
+        "Akio Ootsuka"
+      ],
+      "description": "A scientist who uses her dream alter ego to stop a thief from misusing a device that allows people to enter dreams.",
+      "image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1943-TBNhMVA9VwdI.png",
+      "quantity": 25,
+      "likes": 1460,
+      "available": true
+    },
+    {
+      "id": "13",
+      "name": "A Silent Voice",
+      "cast":[
+        "Saori Hayami",
+        "Miyu Iruno",
+        "Aoi Yuuki"
+    ],
+    "description": "A boy who tries to make amends for bullying a deaf girl in elementary school.",
+    "image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20954-UMb6Kl7ZL8Ke.jpg",
+    "quantity": 25,
+    "likes": 3600,
+    "available":true
+   },
+   {
+    "id": "14",
+    "name": "Your Name",
+    "cast":[
+      "Mone Kamishiraishi",
+      "Ryuunosuke Kamiki",
+      "Kanon Tani"
+     ],
+     "description": "Two high school students who mysteriously start swapping bodies.",
+     "image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21519-fPhvy69vnQqS.png",
+     "quantity": 40,
+     "likes": 2000,
+     "available": true
+    },
+    {
+      "id": "15",
+      "name": "Wolf Children",
+      "cast":[
+        "Aoi Miyazaki",
+        "Haru Kuroki",
+        "Yukito Nishii"
+      ],
+      "description": "A woman who falls in love with a half-wolf, half-human man and raises their two children as they grow up.",
+      "image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12355-wNsvhEsXEgrH.png",
+      "quantity": 10,
+      "likes":2400,
+      "available":true
+    },
+    {
+      "id": "16",
+      "name": "Spirited Away",
+      "cast":[
+        "Rumi Hiiragi",
+        "Miyu Iruno",
+        "Mari Natsuki"
+      ],
+      "description": "A 10-year-old girl named Chihiro who accidentally discovers a world of spirits and demons while moving to the suburbs with her family.",
+      "image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199-ilRRfrty7HrJ.jpg",
+      "quantity": 40,
+      "likes": 3500,
       "available": true
     }
   ],
