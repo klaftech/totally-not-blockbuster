@@ -1,5 +1,5 @@
 import CartList from "./CartList";
-
+import "../assets/css/cart-container.css"
 function CartContainer({ cart, moviesInCart, removeFromCart }) {
 //function CartContainer({cart, setCart}) {
   
@@ -12,7 +12,7 @@ function CartContainer({ cart, moviesInCart, removeFromCart }) {
     // }
     return(
         <div>
-            <h2>Your Cart</h2>
+            <h2 className="cart-container">Your Cart</h2>
             <CartList cart={cart} moviesInCart={moviesInCart} removeFromCart={removeFromCart} />
         </div>
 
