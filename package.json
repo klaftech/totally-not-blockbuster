@@ -1,9 +1,25 @@
 {
   "name": "totally-not-blockbuster",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "This project is a React-based app that demonstrates building simple site for users to borrow movies.",
+  "contributors": [
+    {
+      "name": "Elchonon Klafter",
+      "url": "https://github.com/klaftech"
+    },
+    {
+      "name": "Nemanja Stankovic",
+      "url": "https://github.com/nemswirls"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klaftech/totally-not-blockbuster.git"
+  },
   "type": "module",
   "scripts": {
+    "server": "json-server db.json",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
