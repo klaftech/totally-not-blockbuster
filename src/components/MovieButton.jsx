@@ -24,7 +24,8 @@ function MovieButton({ btnVariant="light", btnDisabled=false, text, movie, onCli
     
     return (
         <Button 
-            style={{"padding": "5px"}} variant={btnVariant} 
+            style={{"margin": "5px"}} 
+            variant={btnVariant} 
             disabled={btnDisabled}
             onClick={() => {
                 onClick(movie)
