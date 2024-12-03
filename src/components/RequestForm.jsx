@@ -39,7 +39,7 @@ function RequestForm({ onFormSubmitted }) {
             ...formData,
             [key]: value
         }
-        //console.log(updatedForm)
+        
         setFormData(updatedForm)
     }
 

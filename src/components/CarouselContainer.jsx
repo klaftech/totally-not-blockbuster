@@ -1,20 +1,17 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../assets/css/carousel.css";
-//import placeholder from '../assets/placeholder.png'
 import CarouselItem from './CarouselItem';
 
-function CarouselContainer({ cart, movies, moviesInCart, onLikeButton, onBorrowButton }) {
+function CarouselContainer({ cart, movies, onLikeButton, onBorrowButton }) {
     
     //show loading if fetch promises are not yet fulfilled into state
-    if(!cart) return <div>Loading Cart</div>
     if(!movies) return <div>Loading Movies</div>
-    if(!moviesInCart) return <div>Loading Movies in cart</div>
+    if(!cart) return <div>Loading Cart</div>
 
     //build carousel items
     const moviesToDisplay = movies.map((movie,index) => {
-        //const isCarted = cart.items.find((cartMovie) => cartMovie.movieId === movie.id);
-        const isCarted = moviesInCart.find((element) => element.id === movie.id)
+        const isCarted = cart.items.find((cartMovie) => cartMovie.movieId === movie.id);
         return (
             <CarouselItem 
                 key={index} 
@@ -50,7 +47,6 @@ function CarouselContainer({ cart, movies, moviesInCart, onLikeButton, onBorrowB
     };
 
     return (
-        
         <Carousel 
             responsive={responsive}
             centerMode={true}
@@ -76,8 +72,6 @@ function CarouselContainer({ cart, movies, moviesInCart, onLikeButton, onBorrowB
         >
             {moviesToDisplay}
         </Carousel>
-        
-        
     );
 };
 
