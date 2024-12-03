@@ -3,14 +3,17 @@ import MovieButton from './MovieButton';
 function CarouselItem({ isCarted, movie, onClickBorrow, onClickLike }) {
     let borrowBtnDisabled = false
     let borrowBtnText = "Borrow"
+    let btnVariant = "success"
 
     if(isCarted){
         borrowBtnDisabled = true;
         borrowBtnText = "In Cart";
+        btnVariant = "light";
     } else {
         if(!movie.available){
             borrowBtnDisabled = true;
             borrowBtnText = "Unavailable";
+            btnVariant = "secondary"
         }
     }
     return (
@@ -20,7 +23,7 @@ function CarouselItem({ isCarted, movie, onClickBorrow, onClickLike }) {
             <div className="movie-details">
                 <h6>{movie.name}</h6>
                 <MovieButton 
-                    btnVariant="light" 
+                    btnVariant={btnVariant} 
                     btnDisabled={borrowBtnDisabled} 
                     text={borrowBtnText} 
                     movie={movie} 

@@ -21,7 +21,7 @@ function MovieButton({ btnVariant="light", btnDisabled=false, text, movie, onCli
     if(text === "likes"){
         text = <div><FontAwesomeIcon color={(isClicked) ? "red" : "black"} icon={faHeart} /> {movie.likes}</div>
     }
-    
+        
     return (
         <Button 
             style={{"margin": "5px"}} 

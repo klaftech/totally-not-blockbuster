@@ -30,11 +30,11 @@ function CarouselContainer({ cart, movies, onLikeButton, onBorrowButton }) {
     const responsive = {
         superLargeDesktop: {
           breakpoint: { max: 4000, min: 3000 },
-          items: 6
+          items: 7
         },
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 6
+          items: 7
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
