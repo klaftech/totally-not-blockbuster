@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Navigate, createBrowserRouter, RouterProvider } from 'react-router-dom';
-//import { HashRouter } from 'react-router-dom';
 
 import Layout from './Layout'
 import ErrorPage from './ErrorPage';
@@ -144,7 +143,7 @@ function App() {
       })
   }
 
-  const router = createBrowserRouter([
+  let router = createBrowserRouter([
     {
       path: "/",
       element: <Layout />,
@@ -168,10 +167,10 @@ function App() {
         }
       ]
     }
-  ]);
+  ], {basename: "/totally-not-blockbuster"});
 
   return (
-    <RouterProvider router={router} basename="/totally-not-blockbuster" />
+    <RouterProvider router={router} />
     // <CarouselContainer cart={cart} movies={movies} moviesInCart={moviesInCart} onLikeButton={handleLikeButton} onBorrowButton={handleBorrowButton} />
   )
 }
