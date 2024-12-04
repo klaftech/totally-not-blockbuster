@@ -169,7 +169,7 @@ function App() {
         }
       ]
     }
-  ], {basename: {appBaseName}});
+  ], {basename: appBaseName});
 
   return (
     <RouterProvider router={router} />
