@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header'
 
-function Layout() {
+function Layout({appBaseName}) {
     return (
         <div>
             <Header />
@@ -11,7 +11,7 @@ function Layout() {
             </main>
             <footer style={{"align": "center", "padding": "20px"}}>
                 <div>
-                    <img src="/flatiron-favicon.ico" />
+                    <img src={appBaseName + "/flatiron-favicon.ico"} />
                     <span style={{"marginLeft": "10px"}}>Flatiron School | <i>Software Engineering Phase 2 Project</i></span>
                 </div>
             </footer>
