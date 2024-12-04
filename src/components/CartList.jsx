@@ -1,6 +1,6 @@
 import "../assets/css/cart.css"
 function CartList({ moviesInCart, removeFromCart}) {
-if ((!Array.isArray(moviesInCart)) || ((Array.isArray(moviesInCart)) && (moviesInCart.length === 0))){
+if (moviesInCart.length === 0){
     return <div className="cart">Your cart is empty. Borrow a movie to fill it!</div>
 }
 return(
