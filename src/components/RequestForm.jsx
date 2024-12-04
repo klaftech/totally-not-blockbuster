@@ -1,7 +1,7 @@
 //bootstrap form theme
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
+import "../assets/css/form.css"
 import { useState } from 'react';
 
 function RequestForm({ onFormSubmitted }) {
@@ -52,7 +52,7 @@ function RequestForm({ onFormSubmitted }) {
     }
 
     return (
-        <Form onSubmit={onSubmit}>
+        <Form className="form-container" onSubmit={onSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control onChange={onChange} value={formData.email} name="email" type="email" placeholder="Enter email" />

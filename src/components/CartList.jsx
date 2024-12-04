@@ -1,4 +1,3 @@
-import { NavItem } from "react-bootstrap";
 import "../assets/css/cart.css"
 function CartList({ moviesInCart, removeFromCart}) {
 if ((!Array.isArray(moviesInCart)) || ((Array.isArray(moviesInCart)) && (moviesInCart.length === 0))){
