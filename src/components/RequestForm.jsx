@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 function RequestForm({ onFormSubmitted }) {
 
-    const baseUrl = "http://localhost:3000/wishlist"
+    const baseUrl = "https://totally-not-blockbuster-api.onrender.com/api/wishlist" //using render.com
     const formObj = {
         email: "",
         name: "",
