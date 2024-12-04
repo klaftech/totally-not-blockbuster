@@ -2,8 +2,7 @@
   "name": "totally-not-blockbuster",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://klaftech.github.io/totally-not-blockbuster",
-  "description": "This project is a React-based app that demonstrates building simple site for users to borrow movies.",
+  "homepage": "/totally-not-blockbuster",
   "contributors": [
     {
       "name": "Elchonon Klafter",
@@ -21,7 +20,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "server": "json-server db.json",
     "dev": "vite",
     "build": "vite build",

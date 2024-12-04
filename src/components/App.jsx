@@ -145,7 +145,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/totally-not-blockbuster/",
       element: <Layout />,
       errorElement: <ErrorPage />,
       children: [
@@ -163,7 +163,7 @@ function App() {
         },
         {
           path: "*",
-          element: <Navigate replace to="/" />
+          element: <Navigate replace to="/totally-not-blockbuster/" />
         }
       ]
     }
