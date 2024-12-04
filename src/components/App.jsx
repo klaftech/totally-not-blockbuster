@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Navigate, createBrowserRouter, RouterProvider } from 'react-router-dom';
+//import { HashRouter } from 'react-router-dom';
 
 import Layout from './Layout'
 import ErrorPage from './ErrorPage';
@@ -145,7 +146,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/totally-not-blockbuster/",
+      path: "/",
       element: <Layout />,
       errorElement: <ErrorPage />,
       children: [
@@ -163,14 +164,15 @@ function App() {
         },
         {
           path: "*",
-          element: <Navigate replace to="/totally-not-blockbuster/" />
+          element: <Navigate replace to="/" />
         }
       ]
     }
   ]);
 
   return (
-    <RouterProvider router={router} />
+    <RouterProvider router={router} basename="/totally-not-blockbuster" />
+    // <CarouselContainer cart={cart} movies={movies} moviesInCart={moviesInCart} onLikeButton={handleLikeButton} onBorrowButton={handleBorrowButton} />
   )
 }
 
