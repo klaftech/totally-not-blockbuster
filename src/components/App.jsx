@@ -11,6 +11,8 @@ import dbLocal from '../../db.json'
 function App() {
 
   const baseUrl = "http://localhost:3000"
+  const appBaseName = "/totally-not-blockbuster";
+
   const [cart, setCart] = useState()
   const [movies, setMovies] = useState()
   const [moviesInCart, setMoviesInCart] = useState()
@@ -143,10 +145,10 @@ function App() {
       })
   }
 
-  const router = createBrowserRouter([
+  let router = createBrowserRouter([
     {
-      path: "/totally-not-blockbuster/",
-      element: <Layout />,
+      path: "/",
+      element: <Layout appBaseName={appBaseName} />,
       errorElement: <ErrorPage />,
       children: [
         { 
@@ -163,11 +165,11 @@ function App() {
         },
         {
           path: "*",
-          element: <Navigate replace to="/totally-not-blockbuster/" />
+          element: <Navigate replace to="/" />
         }
       ]
     }
-  ]);
+  ], {basename: appBaseName});
 
   return (
     <RouterProvider router={router} />
