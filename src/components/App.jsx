@@ -15,7 +15,7 @@ function App() {
 
   const [cart, setCart] = useState()
   const [movies, setMovies] = useState()
-  const [moviesInCart, setMoviesInCart] = useState()
+  const [moviesInCart, setMoviesInCart] = useState([])
   
   useEffect(()=> {
     //load movies
