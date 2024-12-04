@@ -1,0 +1,27 @@
+.bg-body-tertiary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a202c; 
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+.navbar-title{
+font-weight: bold !important;
+text-transform: uppercase !important;
+color:blue !important;
+font-family: 'Pacifico' !important;
+
+
+}
+.navbar-item {
+    margin: 0 150px;
+    color: #000000 !important;
+    text-decoration: none;
+    font-weight: bold !important;
+    transition: color 0.3s ease;
+  }
+  .navbar-item:hover {
+    color: #0000FF !important; 
+  }
