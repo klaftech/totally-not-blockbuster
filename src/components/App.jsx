@@ -10,7 +10,7 @@ import dbLocal from '../../db.json'
 
 function App() {
 
-  const baseUrl = "http://localhost:3000"
+  const baseUrl = "https://totally-not-blockbuster-api.onrender.com/api" //using render.com
   const appBaseName = "/totally-not-blockbuster";
 
   const [cart, setCart] = useState()
