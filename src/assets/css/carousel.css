@@ -1,15 +1,22 @@
 .carousel-item-spacing {
-    padding: 0 10px; /* Horizontal spacing between items */
-    display: inline-block; 
+    /* border: 2px solid white; */
+    margin: 0 15px; /* Horizontal spacing between items */
     text-align: center;
+    display: inline-block;
+    /* background-color: lightgray;  */
+    /* border-radius: 25px; */
 }
 
 .carousel-item-spacing img {
-    width: 125px;
-    height: 200px; 
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .movie-details {
     background-color: lightblue; 
     padding: 10px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
