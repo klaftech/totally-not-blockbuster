@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import { serverBaseUrl } from '../assets/serverBaseUrl';
-import "../assets/css/form.css"
+import "../assets/css/form.css";
 
 function RequestForm({ onFormSubmitted }) {
     
