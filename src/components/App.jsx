@@ -9,6 +9,7 @@ import ErrorPage from './ErrorPage';
 import CarouselContainer from './CarouselContainer';
 import CartContainer from './CartContainer';
 import RequestFormContainer from './RequestFormContainer';
+import ToastPopup from './ToastPopup';
 
 function App() {
 
