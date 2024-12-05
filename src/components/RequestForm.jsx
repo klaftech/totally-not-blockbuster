@@ -1,12 +1,13 @@
 //bootstrap form theme
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import "../assets/css/form.css"
 import { useState } from 'react';
+import { serverBaseUrl } from '../assets/serverBaseUrl';
+import "../assets/css/form.css"
 
 function RequestForm({ onFormSubmitted }) {
-
-    const baseUrl = "https://totally-not-blockbuster-api.onrender.com/api/wishlist" //using render.com
+    
+    const baseUrl = `${serverBaseUrl}/wishlist`;
     const formObj = {
         email: "",
         name: "",
@@ -20,7 +21,7 @@ function RequestForm({ onFormSubmitted }) {
     function PostObj(obj){
         return {
             method: "POST",
-            header: {
+            headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(obj)

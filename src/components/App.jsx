@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react'
 import { Navigate, createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import { serverBaseUrl } from '../assets/serverBaseUrl';
+import dbLocal from '../../db.json'
+
 import Layout from './Layout'
 import ErrorPage from './ErrorPage';
 import CarouselContainer from './CarouselContainer';
 import CartContainer from './CartContainer';
 import RequestFormContainer from './RequestFormContainer';
-import dbLocal from '../../db.json'
 
 function App() {
 
-  const baseUrl = "https://totally-not-blockbuster-api.onrender.com/api" //using render.com
+  const baseUrl = serverBaseUrl;
   const appBaseName = "/totally-not-blockbuster";
 
   const [cart, setCart] = useState()
