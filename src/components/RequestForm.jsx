@@ -46,9 +46,6 @@ function RequestForm({ onFormSubmitted }) {
 
     function onSubmit(event){
         event.preventDefault()
-        console.log("form",formData)
-        console.log("obj",PostObj(formData))
-
         fetch(baseUrl,PostObj(formData))
             .then(res => res.json())
             .then(data => onFormSubmitted(true))
